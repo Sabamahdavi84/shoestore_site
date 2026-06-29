@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans+Hebrew:wght@100..800&display=swap');
 
 :root {
-  --bg-primary: #03050e;
-  --bg-secondary: #080a14;
+  --bg-primary: #120122;
+  --bg-secondary: #1a0231;
   --bg-accent: #101530;
   --bg-muted: #141414;
-  --foreground: #f7f7f7;
+  --foreground: #e2d9e7;
   --muted-foreground: #7f8296;
   --border-primary: #262626;
   --border-secondary: #101530;
-  --gradient-1: linear-gradient(to top left, #00d435, #43f75b, #6ffc92);
-  --gradient-2: linear-gradient(to top left, #00d435, #ffb804, #6ffc92);
-  --primary: #00d60b;
-  --primary-accent: #43f752;
+  --gradient-1: linear-gradient(to top left, #6305f0, #8332fc, #a870fc);
+  --gradient-2: linear-gradient(to top left, #7929f1, #d49bfb, #644593);
+  --primary: #954bef;
+  --primary-accent: #9c53f5;
   --warning: #ffb804;
   --transition: all 400ms ease;
   --glow: radial-gradient(rgba(0, 36, 210, 0.3) 0%, rgba(3, 5, 14, 0.5));
@@ -166,7 +166,7 @@ img {
     padding: 40px 20px;
   }
   .heading-1{
-    font-size: 45px;
+    font-size: 35px;
     line-height: 50px;
   }
   .sub-title{
@@ -291,4 +291,157 @@ nav .cancel-btn {
   nav .search-btn {
     display: none;
   }
+}
+
+#hero .container {
+  display: grid;
+  grid-template-columns: auto 500px;
+  gap: 30px;
+  padding-top: 100px;
+  align-items: flex-start;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: transparent var(--border-primary) transparent
+    var(--border-primary);
+  margin-top: 80px;
+}
+#hero .buttons-wrapper {
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+#hero .hero-image {
+  position: relative;
+  max-width: 500px;
+  margin:0 auto;
+  margin-top: -100px;
+}
+
+#hero .rating-group {
+  position: absolute;
+  bottom: -65px;
+  left: 0;
+  -webkit-backdrop-filter: blur(100px);
+  background:rgba(255,255,255,.06);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.1);
+  padding:18px 22px;
+  border-radius:18px;
+
+}
+
+#hero .stars-container {
+  color: var(--warning);
+}
+
+#hero .discount {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  transition: var(--transition);
+  text-align: center;
+  background: var(--gradient-2);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+#hero .discount-wrapper:hover .discount {
+  scale: 1.1;
+}
+
+@media (max-width: 1000px) {
+  #hero .container {
+    grid-template-columns: auto 400px;
+  }
+}
+@media (max-width: 900px) {
+  #hero .heading-1 *{
+    font-size: larger;
+  }
+
+  #hero .container * {
+    text-align: center;
+  }
+
+  #hero .container {
+    grid-template-columns: 100%;
+    border: none;
+  }
+  #hero .discount-wrapper {
+    margin: auto;
+  }
+
+  #hero .buttons-wrapper {
+    justify-content: center;
+  }
+}
+
+
+@keyframes floatShoe{
+
+    0%{
+        transform: translateY(0px) rotate(-3deg);
+    }
+    50%{
+        transform: translateY(-18px) rotate(3deg);
+    }
+    100%{
+        transform: translateY(0px) rotate(-3deg);
+    }
+
+}
+
+.offer-badge{
+    position:absolute;
+    top:60px;
+    right:25px;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:var(--gradient-1);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    transform:rotate(18deg);
+    box-shadow:0 20px 40px rgba(125,70,255,.45);
+    border:4px solid rgba(255,255,255,.15);
+    animation: badgeFloat 3s ease-in-out infinite;
+}
+
+.offer-badge span{
+    font-size:34px;
+    font-weight:700;
+    line-height:1;
+}
+
+.offer-badge p{
+    font-size:18px;
+    font-weight:600;
+    margin-top:5px;
+    letter-spacing:2px;
+}
+
+@keyframes badgeFloat{
+
+    0%{
+        transform:rotate(18deg) translateY(0);
+    }
+    50%{
+        transform:rotate(18deg) translateY(-10px);
+    }
+    100%{
+        transform:rotate(18deg) translateY(0);
+    }
+}
+
+.shoe-img{
+    transition: transform .4s ease, filter .4s ease;
+    filter: drop-shadow(0 35px 35px rgba(98,60,255,.25));
+}
+
+.hero-image:hover .shoe-img{
+    transform: scale(1.08);
 }
