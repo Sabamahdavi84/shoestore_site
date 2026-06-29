@@ -17,7 +17,13 @@
                     <h1>Shoe <span class="gradient-text">store </span></h1>
                     <i class="fa-solid fa-cart-plus"></i>
                 </div> 
-                <div class="column flex-center tabs sidebar">
+            </div>
+               <input type="checkbox" id="sidebar-toggle" />
+               <label for="sidebar-toggle" class="overlay"></label>
+               <div class="column flex-center tabs sidebar">
+                 <label for="sidebar-toggle" class="flex-center icon-wrapper cancel-btn">
+                  <i class="fa-solid fa-xmark"></i>
+                </label>
                     <a href="#home" class="tabs active">
                         <h4>Home</h4>
                     </a>
@@ -46,6 +52,9 @@
                     <i class="fa-solid fa-cart-plus"></i>
                 </button>
                 <button class="btn primary contact-btn">start</button>
+                <label for="sidebar-toggle" class="flex-center btn menu-btn">
+                 <i class="fa-solid fa-bars"></i>
+                </label>
             </div> 
          </nav>
         <!-- navigation end -->
