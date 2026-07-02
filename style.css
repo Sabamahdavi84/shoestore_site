@@ -375,6 +375,34 @@ nav .cancel-btn {
   #hero .buttons-wrapper {
     justify-content: center;
   }
+  #hero .hero-image {
+    width: 300px;
+    height: 300px;
+    margin-top: -40px;
+    margin-bottom: 30px;
+  }
+  #hero .offer-badge {
+    top:40px;
+    right:-55px;
+    width:100px;
+    height:100px;
+  }
+  #hero .offer-badge p{
+    font-size:12px;
+    font-weight:600;
+    margin-top:5px;
+    letter-spacing:2px;
+  }
+  #hero .offer-badge span{
+    font-size:25px;
+    font-weight:700;
+    line-height:1;
+}
+#hero .rating-group{
+    font-size:15px;
+    font-weight:500;
+    line-height:1;
+}
 }
 
 
@@ -452,7 +480,7 @@ nav .cancel-btn {
   top: 50%;
   transform: translateY(-50%);
   background: var(--glow);
-  padding: 20px 7px;
+  padding: 20px 3px;
   -webkit-backdrop-filter: blur(130px);
   backdrop-filter: blur(130px);
   border-radius: 10px;
@@ -481,9 +509,6 @@ nav .cancel-btn {
   overflow: hidden;
 }
 
-#about .about-image:hover img {
-  transform: scale(1.2);
-}
 
 #about .buttons-wrapper {
   margin-top: 30px;
@@ -496,4 +521,8 @@ nav .cancel-btn {
   #about .container {
     grid-template-columns: 100%;
   }
+  #about .about-image {
+     max-width: 280px;
+     margin:0 auto;
+}
 }
