@@ -8,7 +8,7 @@ $('.feedbacks-container').slick({
         {
          breakpoint:900,
             settings:{
-                slidesToShow:3
+                slidesToShow:2
             },
         },
         {

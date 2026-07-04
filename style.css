@@ -3,11 +3,11 @@
 :root {
   --bg-primary: #120122;
   --bg-secondary: #1a0231;
-  --bg-accent: #101530;
+  --bg-accent: #19034881;
   --bg-muted: #141414;
   --foreground: #e2d9e7;
   --muted-foreground: #7f8296;
-  --border-primary: #262626;
+  --border-primary: #2b223a;
   --border-secondary: #101530;
   --gradient-1: linear-gradient(to top left, #6305f0, #8332fc, #a870fc);
   --gradient-2: linear-gradient(to top left, #7929f1, #d49bfb, #644593);
@@ -622,6 +622,8 @@ nav .cancel-btn {
 }
 #feedbacks .feedbacks-container {
   margin-top: 60px;
+  position: relative;
+  padding: 0 50px;
 }
 
 #feedbacks .slick-track {
@@ -631,7 +633,57 @@ nav .cancel-btn {
 
 .slick-prev,
 .slick-next {
-  display: none !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: var(--primary-accent);
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: var(--transition);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  font-size: 0;
+  color: transparent;
+}
+
+/* موقعیت دکمه قبلی (سمت چپ) */
+.slick-prev {
+  left: 0;
+}
+
+/* موقعیت دکمه بعدی (سمت راست) */
+.slick-next {
+  right: 0;
+}
+/* تغییر آیکون‌ها با فونت آوسام */
+.slick-prev::before,
+.slick-next::before {
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  font-size: 18px;
+  color: #fff;
+}
+
+.slick-prev::before {
+  content: "\f053";
+}
+
+.slick-next::before {
+  content: "\f054";
+}
+
+/* افکت هاور روی دکمه‌ها */
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #4e2d60;
+  color: var(--bg-primary);
+  transform: translateY(-50%) scale(1.1);
 }
 
 #feedbacks .feed-block {
@@ -641,6 +693,9 @@ nav .cancel-btn {
   border-radius: 10px;
   border: solid 2px transparent;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 320px; 
 }
 
 #feedbacks .feed-block:hover {
@@ -661,11 +716,13 @@ nav .cancel-btn {
 }
 
 #feedbacks .details {
+  flex: 1;
   padding: 20px 0;
   text-align: center;
 }
 
 #feedbacks .bottom {
+  margin-top: auto;
   text-align: center;
 }
 
@@ -682,9 +739,29 @@ nav .cancel-btn {
   font-size: 10px;
 }
 
+@media (max-width: 900px) {
+  #feedbacks .feedbacks-container {
+    padding: 0 40px;
+  }
+  #feedbacks .slick-track {
+    gap: 15px;
+  }
+}
+
 @media (max-width: 600px) {
+  #feedbacks .feedbacks-container {
+    padding: 0 35px;
+  }
   #feedbacks .slick-track {
     gap: 0;
+  }
+  /* در موبایل هم دکمه‌ها نمایش داده می‌شوند اما کوچک‌تر */
+  .slick-prev, .slick-next {
+    width: 30px;
+    height: 30px;
+  }
+  .slick-prev:before, .slick-next:before {
+    font-size: 14px;
   }
 }
 #contact .contact-form{
