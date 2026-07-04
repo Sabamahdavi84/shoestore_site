@@ -213,10 +213,14 @@ nav .tabs {
   cursor: pointer;
   border: solid 0.5px transparent;
 }
-nav .tabs:hover {
+
+nav .tabs:hover{
+  border-color: var(--primary);
+  background: var(--bg-accent);
   color: var(--foreground);
 }
-nav .tabs.active {
+
+.tabs.active {
   border-color: var(--primary);
   background: var(--bg-accent);
   color: var(--foreground);

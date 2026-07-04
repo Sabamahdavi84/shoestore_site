@@ -7,8 +7,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="style.css"/>
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css"/>
+        <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
         <!-- navigation start -->
@@ -21,14 +22,11 @@
             </div>
                <input type="checkbox" id="sidebar-toggle" />
                <label for="sidebar-toggle" class="overlay"></label>
-               <div class="column flex-center tabs sidebar">
+               <div class="column flex-center sidebar">
                  <label for="sidebar-toggle" class="flex-center icon-wrapper cancel-btn">
                   <i class="fa-solid fa-xmark"></i>
                 </label>
-                    <a href="#home" class="tabs active">
-                        <h4>Home</h4>
-                    </a>
-                    <a href="#home" class="tabs">
+                    <a href="#hero" class="tabs">
                         <h4>Home</h4>
                     </a>
                     <a href="#about" class="tabs">
@@ -37,7 +35,7 @@
                     <a href="#products" class="tabs">
                         <h4>products</h4>
                     </a>
-                    <a href="#feedback" class="tabs">
+                    <a href="#feedbacks" class="tabs">
                         <h4>feedback</h4>
                     </a>
                     <a href="#contact" class="tabs">
@@ -64,7 +62,7 @@
           <section id="hero" class="flex">
             <div class="container">
                 <div class="column">
-                    <h1 class="heading-1">
+                    <h1 class="heading-1" data-aos="fade-right">
                         nice<span class="stroke-text">
                             shoes
                         </span>
@@ -88,7 +86,7 @@
                       <span>50%</span>
                        <p>OFF</p>
                     </div>
-                    <div class="rating-group" data-aos="fade-left" data-aos-delay="200">
+                    <div class="rating-group" data-aos="fade-right" data-aos-delay="200">
                         <div class="flex row">
                         <h1>4.5</h1>
                         <div class="flex-center stars-container">
@@ -130,8 +128,8 @@
                     <img src="./assets/shoe2.png" alt=""/>
                 </div>
                 <div class="column">
-                    <h1 class="heading-1 gradient-text"> find the best shoes here</h1>
-                    <div class="content">
+                    <h1 class="heading-1 gradient-text" data-aos="fade-left"> find the best shoes here</h1>
+                    <div class="content" data-aos="fade-left">
                        <p class="muted">Step into a world where comfort meets style.
                          We believe that the right pair of shoes is more than just
                           an accessory — it is a reflection of your personality, 
@@ -391,7 +389,7 @@
                         customer 
                         <span class="gradient-text">feedbacks</span>
                     </h1>
-                    <div class="feedbacks-container">
+                       <div class="feedbacks-container">
                         <!-- feedback block start -->
                          <div class="feed-block">
                             <div class="profile">
@@ -416,7 +414,6 @@
                                <p class="muted">actor</p>
                             </div>
                          </div>
-                
                          <div class="feed-block">
                             <div class="profile">
                                 <img src="./assets/girl.jpg"/>
@@ -463,7 +460,7 @@
                             </div>
                          </div>
                         <!-- feedback block end -->
-                    </div>
+                      </div>
                 </div>
              </section>
             <!-- feedback end -->
@@ -504,10 +501,7 @@
                         <i class="fa-solid fa-cart-plus"></i>
                     </div> 
                     <div class="flex-center footer-tabs">
-                       <a href="#home" class="tabs active">
-                        <h4>Home</h4>
-                    </a>
-                    <a href="#home" class="tabs">
+                       <a href="#hero" class="tabs">
                         <h4>Home</h4>
                     </a>
                     <a href="#about" class="tabs">
@@ -516,7 +510,7 @@
                     <a href="#products" class="tabs">
                         <h4>products</h4>
                     </a>
-                    <a href="#feedback" class="tabs">
+                    <a href="#feedbacks" class="tabs">
                         <h4>feedback</h4>
                     </a>
                     <a href="#contact" class="tabs">
@@ -544,6 +538,7 @@
                </footer>
               <!-- footer end -->
              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+             <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
              <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="app.js"></script>
     </body>

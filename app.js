@@ -20,3 +20,16 @@ $('.feedbacks-container').slick({
        }
     ]
 })
+const tabs = document.querySelectorAll(".sidebar .tabs");
+
+tabs.forEach(tab => {
+    tab.addEventListener("click", function () {
+        tabs.forEach(t => t.classList.remove("active"));
+        this.classList.add("active");
+    });
+});
+AOS.init({
+  duration: 500,
+  easing: "ease-in-sine",
+});
+
