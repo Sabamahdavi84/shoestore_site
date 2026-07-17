@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans+Hebrew:wght@100..800&display=swap');
 
 :root {
-  --bg-primary: #120122;
-  --bg-secondary: #1a0231;
-  --bg-accent: #19034881;
+  --bg-primary: #062046;
+  --bg-secondary: #011526;
+  --bg-accent: #01000281;
   --bg-muted: #141414;
   --foreground: #e2d9e7;
   --muted-foreground: #7f8296;
-  --border-primary: #2b223a;
+  --border-primary: #22293a;
   --border-secondary: #101530;
-  --gradient-1: linear-gradient(to top left, #6305f0, #8332fc, #a870fc);
-  --gradient-2: linear-gradient(to top left, #7929f1, #d49bfb, #644593);
-  --primary: #954bef;
-  --primary-accent: #9c53f5;
+  --gradient-1: linear-gradient(to top left, #04318b, #195fc7, #9fc4f2);
+  --gradient-2: linear-gradient(to top left, #134275, #9bb1fb, #455793);
+  --primary: #254777;
+  --primary-accent: #46618a;
   --warning: #ffb804;
   --transition: all 400ms ease;
-  --glow: radial-gradient(rgba(82, 6, 153, 0.315) 0%, rgba(3, 5, 14, 0.288));
+  --glow: radial-gradient(rgba(6, 84, 153, 0.315) 0%, rgba(1, 29, 57, 0.288));
 }
 * {
   margin: 0;
@@ -438,7 +438,7 @@ nav .cancel-btn {
     align-items:center;
     color:#fff;
     transform:rotate(18deg);
-    box-shadow:0 20px 40px rgba(125,70,255,.45);
+    box-shadow:0 20px 40px rgba(70, 123, 255, 0.45);
     border:4px solid rgba(255,255,255,.15);
     animation: badgeFloat 3s ease-in-out infinite;
 }
@@ -471,7 +471,7 @@ nav .cancel-btn {
 
 .shoe-img{
     transition: transform .4s ease, filter .4s ease;
-    filter: drop-shadow(0 35px 35px rgba(98,60,255,.25));
+    filter: drop-shadow(0 35px 35px rgba(60, 154, 255, 0.25));
 }
 
 .hero-image:hover .shoe-img{
@@ -681,7 +681,7 @@ nav .cancel-btn {
 /* افکت هاور روی دکمه‌ها */
 .slick-prev:hover,
 .slick-next:hover {
-  background-color: #4e2d60;
+  background-color: #2b3a73;
   color: var(--bg-primary);
   transform: translateY(-50%) scale(1.1);
 }
@@ -804,7 +804,7 @@ input{
   padding: 20px 30px;
   width: 100%;
   max-width: 300px;
-  color: #e2e4f0;
+  color: #e2e5f0;
   font-weight: bolder;
   font-size: 15px;
 }
